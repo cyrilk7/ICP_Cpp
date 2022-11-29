@@ -10,3 +10,4 @@ Accra, Ghana to Tokyo, Japan
 Seoul, South Korea to Thule, Greenland
 etc.
 Make sure to include the input txt file in the cmake build folder. The output file is saved to that folder as well.
+C++ Version 14
