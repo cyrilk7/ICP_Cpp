@@ -232,45 +232,6 @@ vector<string> Route::search(Airport start, Airport destination) {
 }
 
 
-//void Route::search(Airport start, Airport destination, vector<string> *path) {
-//    deque<string> frontier;
-//    set<string> explored;
-//    frontier.push_back(start.getIataCode());
-//    parents.insert({start.getIataCode(), "None"});
-//
-//
-//
-//    while(!frontier.empty()){
-//        string poppedValue = frontier.front();
-//        frontier.pop_front();
-//        explored.insert(poppedValue);
-//
-//        if(Route::routes.find(poppedValue) != Route::routes.end()){
-//            vector<Route> temp = Route::routes[poppedValue];
-//            for(int i = 0; i < temp.size(); i++){
-//                Route child = temp.at(i);
-//
-//                if (!Route::contains(frontier,child.getdestIata()) and !Route::set_contains(explored,child.getdestIata())){
-//                    if(Route::parents.find(child.getdestIata()) == Route::parents.end()) {
-//                        Route::parents.insert({child.getdestIata(), poppedValue});
-//                    }
-//                    if (child.getdestIata() == destination.getIataCode()) {
-//                        *path = solutionPath(child.destIata);
-//                        //return path;
-//                    }
-//                    frontier.push_back(child.getdestIata());
-//                }
-//
-//            }
-//
-//        }
-//
-//    }
-//    //return path;
-//
-//}
-
-
 
 /**
  * This function gets the IATA code of an airline
