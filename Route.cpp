@@ -49,9 +49,13 @@ void Route::getFlights(string csvFile) {
         fileStream.open(csvFile);
 
         string line, airlineIata, airlineId, sourceAirportIata, sourceAirportId, destAirportIata, destAirportId, codeshare, stops;
-
+        int count = 0;
         while(getline(fileStream, line)) {
-            //Try and skip the first line of file
+            if (count  == 0){
+                count++;
+                continue;
+
+            }
             stringstream stream(line);
 
             getline(stream, airlineIata, ',');
@@ -143,7 +147,6 @@ void Route::findRoute(std::string csvFile) {
     vector<Airport> sourceAirports = Airport::getAirport(source);
     vector<Airport> destinationAirports = Airport::getAirport(dest);
 
-    //Check for null values
     vector<string> path;
     vector<string> flightPath;
     vector<double> distances;
