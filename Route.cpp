@@ -186,7 +186,7 @@ void Route::findRoute(std::string csvFile) {
             flightPath.emplace_back(current);
         }
     }
-    Route::writeToFile(sourceCity, destCity, path, flightPath, minDistance);
+    Route::writeToFile(csvFile, path, flightPath, minDistance);
 
 }
 
@@ -353,12 +353,11 @@ vector<string> Route::solutionPath(string destinationIata) {
  * @param flightPath The airlines taken to get to these paths
  * @param distance The total distance covered by the path
  */
-void Route::writeToFile(string start, string destination, vector<string> path, vector<string> flightPath, double distance) {
+void Route::writeToFile(string csvFile, vector<string> path, vector<string> flightPath, double distance) {
     ofstream fileStream;
-    start[0] = tolower(start[0]);
-    destination[0] = tolower(destination[0]);
+    csvFile.erase(csvFile.length()-4); //Removing the last four characters
     try{
-        string filename = start + "-" + destination + "_output.txt";
+        string filename = csvFile + "_output.txt";
         fileStream.open(filename);
 
         int count  =  0;

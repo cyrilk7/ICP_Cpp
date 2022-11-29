@@ -11,7 +11,7 @@ unordered_map<string, string> Route::parents = *new unordered_map<string, string
 unordered_map<string, Airport> Airport::codes = *new unordered_map<string, Airport>;
 
 int main() {
-    Route::findRoute("test.txt");
+    Route::findRoute("accra-tokyo.txt");        //Test configuration for input file from user
 }
 
 

@@ -43,7 +43,7 @@ public:
     static void findRoute(string csvFile);
     static vector<string> search(Airport start, Airport destination);
     static double haversine(Airport start, Airport destination);
-    static void writeToFile(string start, string destination, vector<string> path, vector<string> flightPath, double distance);
+    static void writeToFile(string csvFile, vector<string> path, vector<string> flightPath, double distance);
 
 };
 
