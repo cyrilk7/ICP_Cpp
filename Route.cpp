@@ -364,7 +364,7 @@ void Route::writeToFile(string start, string destination, vector<string> path, v
             string key = path.at(count) + "," + path.at(count+1);
             vector<Route> route = Route::flights[key];
             string stops = route.at(0).getNumStops(); //Getting the number of stops for the first flight taken, corresponding to the first flight selected earlier
-            fileStream << count+1 << ". " << flightPath.at(count) + " from " + path.at(count) + " to " + path.at(count+1) + stops + " stops" << endl;
+            fileStream << count+1 << ". " << flightPath.at(count) + " from " + path.at(count) + " to " + path.at(count+1) + " " + stops + " stops" << endl;
             numStops += stoi(stops);
             count++;
 
