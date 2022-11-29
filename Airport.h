@@ -1,6 +1,6 @@
-//
-// Created by Cyril K on 11/20/2022.
-//
+/**
+ * @author Cyril Kujar & Bernd Opoku-Boadu
+ */
 
 #ifndef C___INDIVIDUAL_PROJECT_AIRPORT_H
 #define C___INDIVIDUAL_PROJECT_AIRPORT_H
